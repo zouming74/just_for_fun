@@ -102,3 +102,44 @@ __Ex:__
         - 当输入A和B相同时，输出为1
         - 当输入A和B不同时，输出为0
 - 三态输出门电路
+    - 三态门有三种可能的输出:
+        - 0
+        - 1
+        - Z(高阻态):Z意味着输入与输出是断开的
+    - 输入EN控制输入与输出
+        - 如果EN是1，则$L=A$
+        - 如果EN是0，则$L=Z(高阻态)$
+    - 流程是:$EN \rightarrow A \rightarrow L$
+
+### 逻辑代数基本定理  
+- $0 \cdot 1 $律:$$A \cdot 0 =0 \quad A + 0=A \quad A \cdot 1 =A \quad A +1=1$$
+- 重叠律:$$A \cdot A =A \quad A+A =A$$
+- 互补律:$$A \cdot \overline{A}=0 \quad A +\overline{A}=1$$
+- 还原律:$$\overline{\overline{A}}=A$$
+- 交换律:$$A \cdot B =B \cdot A \quad A +B =B +A$$
+- 结合律:$$(A \cdot B) \cdot C =A \cdot (B \cdot C) \quad (A+B)+C=A+(B+C)$$  
+- 分配律:$$A(B+C) =AB+AC \quad A +BC=(A+B)(A+C)$$
+>在某种程度上，在逻辑代数中，加和乘是同等地位的  
+- 反演律:$$\overline{A\cdot B}=\overline{A}+\overline{B} \quad \overline{A+B}=\overline{A} \cdot \overline{B}$$
+
+- 常用公式:
+    - 吸收律:$$A+A \cdot B =A \quad A(A+B)=A$$
+    - 重要公式:$$A+\overline{A}B=A+B \tag{1}$$  $$AB+\overline{A}C+BC=AB+\overline{A}C \tag{2}$$  $$AB+\overline{A}C+BCD=AB+\overline{A}C \tag{3}$$
+    - 证明:
+        - 吸收律用真值表就可以证明
+        - 公式1需要反用第二个分配律
+        - 公式2和公式3在$BC$乘$A+\overline{A}$，再用分配展开结合前面两项就可以证得结果
+
+
+
+- 基本规则
+    - 代入规则:任何一个包含$A$的逻辑等式，用另一个逻辑式代替$A$的位置，等式任然成立。
+    - 反演规则:对于任意一个逻辑表达式$L$,若将其中与($\cdot$)、或($+$)对换，同时原变量换成非变量，则得到的函数就是原来的反函数
+        - 需要用括号保持原来的运算优先级，即先进行与运算，后进行或运算
+        - 对于反变量以外的非号应该保留下来
+    - 对偶规则:对于任何一个逻辑表达式$L$,将 0和1、与和或进行互换，那么得到的表达式$L^{\prime}$称为对偶式。
+        - 若两个逻辑式相等，则他们的对偶式也相等。
+
+### 逻辑函数  
+
+

@@ -143,3 +143,24 @@ __Ex:__
 ### 逻辑函数  
 
 
+- 表达式的基本形式
+    - 与或表达式:sum of products
+    - 或与表达式:products of sum
+
+- 最简标准(与或表达式)
+    - 包含的与项最少(使用与门的个数最少)
+    - 每个与项中的变量最少(与门输入端最少)
+
+- 公式化简法的基本方法
+    - 并项: $A+\overline{A}=1$
+    - 吸收法: $A+AB=A$
+    - 消去法: $A+\overline{A}B=A+B$,利用分配律
+    - 配项法:
+        - 先利用$A=A(B+\overline{B})$,增加必要项的乘积项
+        - 再利用并项和吸收的方法
+- 逻辑函数式的变换
+    - 利用德摩根定理，将与或运算和或与运算的表达式互相变化
+    - EX:
+      - 与或表达式转化为与非:$\overline{\overline{AB+AC}}=\overline{\overline{AB} \cdot \overline{AC}}$
+      - 与或表达式转化为或非:$\overline{A}\overline{B}C+A\overline{B}\overline{C}=\overline{\overline{\overline{A}\overline{B}C}}+\overline{\overline{A\overline{B}\overline{C}}}=\overline{A+B+\overline{C}}+\overline{\overline{A}+B+C}=\overline{\overline{\overline{A+B+\overline{C}}+\overline{\overline{A}+B+C}}}$
+

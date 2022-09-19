@@ -164,3 +164,32 @@ __Ex:__
       - 与或表达式转化为与非:$\overline{\overline{AB+AC}}=\overline{\overline{AB} \cdot \overline{AC}}$
       - 与或表达式转化为或非:$\overline{A}\overline{B}C+A\overline{B}\overline{C}=\overline{\overline{\overline{A}\overline{B}C}}+\overline{\overline{A\overline{B}\overline{C}}}=\overline{A+B+\overline{C}}+\overline{\overline{A}+B+C}=\overline{\overline{\overline{A+B+\overline{C}}+\overline{\overline{A}+B+C}}}$
 
+- 逻辑函数表达式的基本形式
+    - 与或表达式:最小项表达式，每一个与项都是最小项
+    - 或与表达式:最大项表达式，每一个或项都是最大项
+
+- 最小项
+    - 在n变量的逻辑函数中，若一个乘积包含了所有的n个逻辑变量，每个变量都以他的原变量或者非变量出现在乘积项中，且出现一次，则称这个乘积项为最小项
+    - 一般n个变量的最小项为$2^n$个
+    - 最小项的编号
+        - 用$m_i$表示最小项，原变量用1，非变量用0表示
+        - EX: $A\overline{B}C \Rightarrow 101 \rightarrow m_5$
+- 最小项表达式:
+    - 由若干个最小项构成的表达式，又称为标准与或式
+    - 为与或逻辑表达式
+    - 与或式中每一个与项都是最小项
+
+- 最大项
+    - 对于有n个变量的函数来说，若一个或项包含了全部的n个变量，每个变量都以它的原变量或非变量的形式出现在或项中，且仅出现一次，则称该或项为最大项
+    - 一般n个变量的最大项有$2^n$个
+    - 编号:用$M_i$表示
+- 最大项表达式:
+    - 由若干个最大项构成的表达式，又称标准或与式
+    - 为或与表达式
+    - 或与式中每一个或项都是最大项
+- 最大项与最小项的关系:
+    - 两者之间是互补的关系:$m_i=\overline{M_i}$
+    - EX:$$m_2=\overline{A}B\overline{C} \rightarrow M_2=A+\overline{B}+C$$
+- 真值表得到最大项最小项表达式:
+    - 最小项表达式:将$L=1$的各个最小项相加
+    - 最大项表达式:将$L=0$的各个最大项项乘
